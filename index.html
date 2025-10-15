@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Code Quiz Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Code Quiz Platform</h1>
+        <div id="welcome-screen">
+            <h2>Welcome to the Coding Challenge!</h2>
+            <p>Select a quiz to start practicing your coding skills.</p>
+            <button onclick="showQuizList()">Start Quiz</button>
+        </div>
+        <div id="quiz-list" style="display: none;">
+            <h2>Available Quizzes</h2>
+            <ul id="quiz-items"></ul>
+        </div>
+        <div id="quiz-screen" style="display: none;">
+            <h2 id="quiz-title"></h2>
+            <p id="quiz-description"></p>
+            <textarea id="code-input" rows="10" placeholder="Write your code here..."></textarea>
+            <button onclick="submitSolution()">Submit Solution</button>
+            <p id="feedback"></p>
+            <button onclick="backToQuizList()">Back to Quiz List</button>
+        </div>
+        <div id="leaderboard" style="display: none;">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+            </table>
+            <button onclick="backToWelcome()">Back to Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
